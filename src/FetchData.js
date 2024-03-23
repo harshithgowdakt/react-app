@@ -4,7 +4,7 @@ function FetchData() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/posts")
+    fetch("http://localhost:3000/users")
       .then((response) => response.json())
       .then((json) => setData(json))
       .catch((error) => console.error("Error:", error));
@@ -15,7 +15,7 @@ function FetchData() {
       <h2>Posts</h2>
       <ul>
         {data.map((item) => (
-          <li key={item.id}>{item.title}</li>
+          <li key={item.id}>{`Name :: ${item.name} Email: ${item.email}`}</li>
         ))}
       </ul>
     </div>
