@@ -1,0 +1,33 @@
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px; /* Adjust as needed */
+  margin: 0 auto; /* Center the form */
+}
+
+.form-group {
+  margin-bottom: 15px; /* Add some space between form fields */
+}
+
+.form-group label {
+  display: block; /* Make the label display as a block element */
+  margin-bottom: 5px; /* Add some space between the label and the input */
+}
+
+.form-group input {
+  width: 100%; /* Make the input take the full width of its container */
+  padding: 10px; /* Add some padding for better usability */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.form-group button {
+  padding: 10px 20px; /* Add some padding */
+  background-color: #007bff; /* Blue background */
+  color: white; /* White text */
+  border: none; /* Remove default border */
+  cursor: pointer; /* Change the cursor to a pointer when hovering */
+}
+
+.form-group button:hover {
+  background-color: #0056b3; /* Darken the background on hover */
+}

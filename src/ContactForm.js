@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./ContactForm.css";
 
 function ContactForm() {
   const [name, setName] = useState("");
@@ -13,7 +14,7 @@ function ContactForm() {
     };
 
     try {
-      const response = await fetch("https://example.com/api/contact", {
+      const response = await fetch("http://localhost:3000/users", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -36,24 +37,28 @@ function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="name">Name:</label>
-      <input
-        type="text"
-        id="name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        required
-      />
+    <form onSubmit={handleSubmit} className="contact-form">
+      <div className="form-group">
+        <label htmlFor="name">Name:</label>
+        <input
+          type="text"
+          id="name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          required
+        />
+      </div>
 
-      <label htmlFor="email">Email:</label>
-      <input
-        type="email"
-        id="email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        required
-      />
+      <div className="form-group">
+        <label htmlFor="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+      </div>
 
       <button type="submit">Submit</button>
     </form>
