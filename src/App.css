@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+
+/* App.css */
+.App .ContactForm,
+.App .FetchData {
+  margin-bottom: 20px; /* Adjust the value as needed */
+}
