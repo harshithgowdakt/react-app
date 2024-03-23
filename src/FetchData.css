@@ -18,11 +18,28 @@
   padding: 0;
 }
 
-.fetch-data-container li {
+.fetch-data-container .user-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 10px;
   border-bottom: 1px solid #eee;
 }
 
-.fetch-data-container li:last-child {
+.fetch-data-container .user-item:last-child {
   border-bottom: none;
+}
+
+.fetch-data-container button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.fetch-data-container button:hover {
+  background-color: #cc0000;
 }
