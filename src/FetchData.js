@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./FetchData.css";
 
 function FetchData() {
   const [data, setData] = useState([]);
@@ -11,8 +12,8 @@ function FetchData() {
   }, []);
 
   return (
-    <div>
-      <h2>Posts</h2>
+    <div className="fetch-data-container">
+      <h2>User</h2>
       <ul>
         {data.map((item) => (
           <li key={item.id}>{`Name :: ${item.name} Email: ${item.email}`}</li>
